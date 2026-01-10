@@ -65,14 +65,27 @@ import authService from '../services/auth'
 
 export default {
   name: 'SignupView',
+  props: {
+    defaultRole: {
+      type: String,
+      default: 'buyer'
+    }
+  },
   data() {
     return {
       email: '',
       password: '',
       passwordConfirmation: '',
-      role: 'buyer',
+      role: this.defaultRole || 'buyer',
       error: null,
       loading: false
+    }
+  },
+  watch: {
+    defaultRole(newRole) {
+      if (newRole) {
+        this.role = newRole
+      }
     }
   },
   methods: {
@@ -120,7 +133,7 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #dbeafe; /* Light blue secondary - body background */
   padding: 20px;
 }
 
@@ -165,7 +178,7 @@ select.form-input {
 
 .form-input:focus {
   outline: none;
-  border-color: #4DBA87;
+  border-color: #1d4ed8; /* Dark blue primary */
 }
 
 .error-message {
@@ -180,7 +193,7 @@ select.form-input {
 .submit-button {
   width: 100%;
   padding: 12px;
-  background-color: #4DBA87;
+  background-color: #1d4ed8; /* Dark blue primary */
   color: white;
   border: none;
   border-radius: 4px;
@@ -192,7 +205,7 @@ select.form-input {
 }
 
 .submit-button:hover:not(:disabled) {
-  background-color: #45a675;
+  background-color: #2563eb;
 }
 
 .submit-button:disabled {
@@ -211,7 +224,7 @@ select.form-input {
 }
 
 .link {
-  color: #4DBA87;
+  color: #1d4ed8; /* Dark blue primary */
   text-decoration: none;
   font-weight: 500;
 }

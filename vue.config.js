@@ -5,13 +5,17 @@ module.exports = defineConfig({
     port: 3001
   },
   pwa: {
-    name: 'Pharmacy App',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
+    name: 'MedMarket',
+    short_name: 'MedMarket',
+    description: 'East Africa\'s Premier Medical Supply Platform',
+    themeColor: '#1d4ed8',
+    msTileColor: '#1d4ed8',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+    appleMobileWebAppStatusBarStyle: 'default',
     manifestOptions: {
-      background_color: '#ffffff'
+      background_color: '#ffffff',
+      display: 'standalone',
+      orientation: 'portrait'
     }
   }
 })

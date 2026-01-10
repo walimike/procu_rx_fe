@@ -89,7 +89,7 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #dbeafe; /* Light blue secondary - body background */
   padding: 20px;
 }
 
@@ -130,7 +130,7 @@ label {
 
 .form-input:focus {
   outline: none;
-  border-color: #4DBA87;
+  border-color: #1d4ed8; /* Dark blue primary */
 }
 
 .error-message {
@@ -145,7 +145,7 @@ label {
 .submit-button {
   width: 100%;
   padding: 12px;
-  background-color: #4DBA87;
+  background-color: #1d4ed8; /* Dark blue primary */
   color: white;
   border: none;
   border-radius: 4px;
@@ -156,7 +156,7 @@ label {
 }
 
 .submit-button:hover:not(:disabled) {
-  background-color: #45a675;
+  background-color: #2563eb;
 }
 
 .submit-button:disabled {
@@ -175,7 +175,7 @@ label {
 }
 
 .link {
-  color: #4DBA87;
+  color: #1d4ed8; /* Dark blue primary */
   text-decoration: none;
   font-weight: 500;
 }
